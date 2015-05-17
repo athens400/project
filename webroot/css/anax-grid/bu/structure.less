@@ -1,0 +1,126 @@
+/**
+ * Layout of the main page elements 
+ */
+ 
+ /**
+  * Wrappers
+  */
+#wrapper, #inner-wrap-header {
+  margin: 0 auto;
+  max-width: @max-width; 
+}
+
+#wrapper,
+#wrap-header,
+#inner-wrap-header,
+#wrap-featured,
+#wrap-main,
+#wrap-triptych,
+#wrap-footer-col {
+    .clearfix();
+}
+
+/**
+ * Element width
+ */
+#header,
+#navbar,
+#flash,
+#footer {
+    .column(@columns);
+}
+
+#main {
+    .column(@columns / 3 * 2);
+}
+
+#sidebar {
+    .column(@columns / 3);
+}
+
+#featured-1,
+#featured-2,
+#featured-3,
+#triptych-1,
+#triptych-2,
+#triptych-3 {
+    .column(@columns / 3);
+}
+ 
+#footer-col-1,
+#footer-col-2,
+#footer-col-3, 
+#footer-col-4 {
+    .column(@columns / 4);
+}
+
+/**
+ * Element height
+ */
+
+#inner-wrap-header {
+	height: @rowHeight * 7;
+}
+ 
+#header {
+	height: @rowHeight * 3;
+}
+
+#navbar, .navbar {
+	height: @rowHeight;
+}
+
+#flash, 
+#triptych-1,
+#triptych-2,
+#triptych-3,
+#footer-col-1,
+#footer-col-2,
+#footer-col-3, 
+#footer-col-4 {
+	min-height: @magicNumber * 3;
+}
+
+#featured-1,
+#featured-2,
+#featured-3 {
+	min-height: @magicNumber * 3;
+}
+
+#featured-1 .article1,
+#featured-2 .article1,
+#featured-3 .article1, {
+	min-height: @magicNumber * 18;
+}
+
+#main, #sidebar {
+	min-height: @magicNumber * 3;
+}
+
+/**
+ * Margins and paddings
+ */
+
+#wrap-header,
+#header,
+#flash,
+#footer,
+#wrap-main,
+#featured-1,
+#featured-2,
+#featured-3,
+#triptych-1,
+#triptych-2,
+#triptych-3,
+#footer-col-1,
+#footer-col-2,
+#footer-col-3, 
+#footer-col-4 {
+    margin-bottom: @rowHeight;
+}
+
+
+
+#header {
+	margin-top: @rowHeight;
+}

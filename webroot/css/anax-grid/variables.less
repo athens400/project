@@ -1,0 +1,191 @@
+/**--------------------------------------------------------------
+ * Variables for theme customization
+ *
+ */
+ 
+ 
+ 
+/**--------------------------------------------------------------
+ * Grid
+ **/
+@column-width: 60;
+@gutter-width: 20;
+@columns: 12;
+
+@marginLR: 20px;
+@marginTB: 24px;
+
+@max-width: 960px;
+
+/**
+ * Magic number for calculations
+ */
+@magicNumber: 24px; /* 16px - 100%/1.5 */
+//@magicNumber: 22px; /* 16px - 100%/1.375 */
+@rowHeight: @magicNumber;
+
+/**--------------------------------------------------------------
+ * Borders, paddings
+ **/
+ 
+@borderElement1: 2px;
+@borderElement2: 1px;
+
+@imgPadding: @magicNumber / 2;
+
+@formBorder: 0;
+
+/**--------------------------------------------------------------
+ * Typography.
+ **/
+
+/**
+ * Font families to choose from. 
+ */
+// Monospace
+@fontFamilyCourier:         "Courier New", Courier, monospace;
+@fontFamilyMonospace:       monospace;
+
+// Serif
+@fontFamilyCambria:         Cambria, Georgia, Times, 'Times New Roman', serif;
+@fontFamilyTimes:           Times, 'Times New Roman', serif;
+@fontFamilyGaramond:        Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", Georgia, "Times New Roman", Times, serif;
+@fontFamilyPalatino:        'Palatino Linotype', 'Book Antiqua', Palatino, serif;
+@fontFamilyJosefin:         "Josefin Slab", @fontFamilyGaramond;
+
+// Sans-serif
+@fontFamilyHelvetica:       Frutiger, "Frutiger Linotype", Univers, Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyCalibri:         Calibri, "Gill Sans", "Gill Sans MT", "Myriad Pro", Myriad, "DejaVu Sans Condensed", "Liberation Sans", "Nimbus Sans L", Tahoma, Geneva, "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyMyriadPro:       MyriadPro-Regular, 'Myriad Pro Regular', MyriadPro, 'Myriad Pro', Helvetica, Arial, sans-serif;
+@fontFamilyHelveticaNeue:   "Helvetica Neue", Helvetica, Arial, sans-serif;
+@fontFamilyArial:           Arial, sans-serif;
+@fontFamilyArialBlack:		'Arial Black', Gadget, sans-serif;
+@fontFamilyArialNarrow:		'Arial Narrow', sans-serif;
+@fontFamilyImpact:			Impact, Charcoal, sans-serif;
+@fontFamilyCentury:			'Century Gothic', sans-serif;
+@fontFamilyLucida:			'Lucida Sans Unicode', 'Lucida Grande', sans-serif;
+@fontFamilyVerdana:			Verdana, Geneva, sans-serif;
+@fontFamilyRoboto:          "Roboto Condensed", @fontFamilyCentury;
+@fontFamilyOswald:          Oswald, @fontFamilyRoboto;
+
+
+
+
+
+
+/**
+ * Default font-families
+ */
+@fontFamilyHeadings:  @fontFamilyJosefin;
+@fontFamilyBody:      @fontFamilyRoboto;
+@fontFamilyMenu:	  @fontFamilyBody;
+@fontFamilyCode:      @fontFamilyMonospace;
+@fontFamilySiteTitle: @fontFamilyTimes;
+
+
+/**
+ * Headings calculation 
+ *
+ * 2.75em  * 16px   = 44 => line-height: 44 = 1
+ * 2.375em * 16px   = 38 => line-height: 44/38 = 1.1579
+ * 2.25em  * 16px   = 36 => line-height: 44/36 = 1.2222
+ * 2em     * 16px   = 32 => line-height: 44/32 = 1.375
+ * 1.875em * 16px   = 30 => line-height: 44/30 = 1.4667
+ * 1.75em  * 16px   = 28 => line-height: 44/28 = 1.5714
+ * 1.375em * 16px   = 22 => line-height: 22 = 1
+ * 1.25em  * 16px   = 20 => line-height: 22/20 = 1.1
+ * 1em     * 16px   = 16 => line-height: 22/16 = 1.375
+ * 0.875em * 16px   = 14 => line-height: 22/14 = 1.5714
+ * 0.75em  * 16px   = 12 => line-height: 22/12 = 1.8333
+ */
+@fontSizeBody: (@magicNumber / 3) * 2;
+
+@fontSizeH1: 2.375em;
+@fontSizeH2: 1.875em;
+@fontSizeH3: 1.375em;
+@fontSizeH4: 1.25em;
+@fontSizeH5: 1.125em;
+@fontSizeH6: 1em;
+
+@fontSizeSmall: 0.875em;
+
+@fontSizeSmaller: 0.75em;
+@fontSizeSmallerLineHeight: 2em;
+
+@fontSizeSiteTitle: 3em;
+
+
+@fontSizeSearchH2: 1.25em;
+
+/**
+ * Table variables for vertical rhythm.
+ */
+@cellHeight: @magicNumber * 2;
+@theadBorder: 2px;
+@trBorder: 1px;
+
+/** --------------------------------------------------------------
+ * General colors to colorize the site
+ */
+@bgColorHtml: #fff;
+@bgColorBody: #fff;
+
+@textColor: #222;
+
+@colorBody:         #22C1E4;
+@colorBody2:        #C4BDD1;
+@colorBody3:        #F9F0EA;
+@colorBody4:        #7aa9af;
+@colorBodyLighter:  #77D8EE;
+@colorBodyLight:    #A4E5F4;
+
+@colorBorder: @colorBody;
+@colorBorderLight: @colorBody2;
+
+@bgColorLight: #f6f6f6;
+
+@colorSiteTitle: #333;
+@colorSiteTitleShadow: #ccc;
+@colorSiteSlogan: #333;
+
+@anchorColor:         #33b;
+@anchorColor2:        #448;
+@anchorColorHover:    #22C1E4;
+@anchorColorActive:   #838;
+@anchorColorVisited:  #838;
+
+@anchorColorAnonymous:      @colorBody;
+@anchorColorAnonymousHover: #00c;
+
+@anchorTabBgColor:          lighten(@anchorColorHover, 35%);
+@anchorTabBgColorHover:     lighten(@anchorColorHover, 30%);
+@anchorTabBgColorActive:    lighten(@anchorColorHover, 35%);
+@anchorTabBgColorSelected:  @bgColorBody;
+
+@colorBorderTabElement:         #aaa;
+@colorBorderTabElementHover:    #777;
+@colorBorderTabElementSelected: #999;
+@colorBorderTabBottom:          #ccc;
+
+@colorMark:   @colorBody;
+@bgColorMark: #eee;
+
+@colorTableHeaderBorder:    #333;
+@colorTableRowBorder:       #ddd;
+@colorTableRowBorderHover:  #aaa;
+@colorTableRowHover:        #222;
+@bgColorTableStripe:        @bgColorLight;
+
+@colorMenuItems:          @colorBody;
+@colorMenuItemsHover:     #000;
+@bgColorMenuItemsHover:   #F9DFA3;
+@colorMenuItemsSelected:  @colorMenuItems;
+
+@colorSearchUrl:  #009933;
+
+
+
+/** --------------------------------------------------------------
+ * Standard colors
+ */
+@grey: #ccc;

@@ -1,0 +1,1 @@
+<img src="<?=$url?>"<?php if(isset($imgClass)) : ?>class='<?=$imgClass?>'<?php endif; ?> alt="<?php if(isset($altText)) : echo $altText; else: ?>Bild<?php endif; ?>">

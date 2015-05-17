@@ -1,0 +1,221 @@
+/**
+ * General elements
+ */
+
+@import url(figure.css);
+
+body {
+  color: #222;
+  background: #fafafa;
+  font-family: arial, sans-serif;
+  overflow-y: scroll;
+}
+
+h1 {
+  font-size: 2.2em;
+  margin-top: 0;
+  padding-top: 30px;
+}
+
+
+/**
+ * Layout of the main page elements 
+ */
+#wrapper {
+  margin: 0 auto;
+  width: 980px; 
+  padding: 10px;
+}
+
+
+/**
+ * Layout for header
+ */
+#header {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.sitelogo {
+  background: #E4E9F2;
+  box-shadow: 0 1px 5px #2A477A;
+  border-radius: 8px;
+}
+
+.sitetitle {
+  position: absolute;
+  top: 6px;
+  left: 130px;
+  font-size: 48px;
+  text-shadow: 0 2px 5px #2A477A;
+}
+
+.siteslogan {
+  position: absolute;
+  top: 65px;
+  left: 130px;
+  font-style: italic;
+  color: #666;
+  text-shadow: 0 0 4px #2A477A;
+}
+
+
+/**
+ * Layout for main
+ */
+#main {
+  min-height: 20em;
+  box-shadow: 0 2px 5px #2A477A;
+}
+
+
+/**
+ * Layout for footer
+ */
+#footer {
+  clear: both;
+  background: #E4E9F2;
+  border-top: 2px solid #fff;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  box-shadow: 0 2px 5px #2A477A;
+  padding: 22px 0;
+}
+
+.sitefooter {
+  color: #666;
+  font-size: 0.8em;
+  padding: 0 20px;
+}
+
+
+/**
+ * For articles
+ */
+.article1, .article2, div.comment-form {
+  border-top: 2px solid #fff;
+  padding: 0 1.5em;
+  text-align: justify;
+  background: #E4E9F2;
+  overflow: auto;
+}
+
+.article2 {
+	border: 0;
+}
+
+.article1 img {
+	float: right;
+	width: 200px;
+	margin: 0 0 15px 15px;
+	border-radius: 4%;
+}
+
+.article1 h1,
+.article1 h2 {
+  border-bottom: 1px solid #fff;
+}
+
+.byline {
+  margin-top: 44px;
+  border-top: 1px solid #fff;
+  padding-top: 22px;
+  color: #666;
+}
+
+.byline p {
+  margin-top: 0;
+  font-style: italic;
+  font-size: 0.8em;
+}
+
+.byline img {
+	float: left;
+	width: 50px;
+	margin: 0 10px 15px 0;
+}
+
+/**
+ * Layout for comments
+ */
+p#web, p#mail {
+	display: none;
+}
+div.comments {
+	display: table;
+	margin: 10px 0;
+	width: 100%;
+	border-spacing: 0 10px;
+}
+
+div.comment {
+	display: table-row;
+	width: 100%;
+}
+
+div.comment div {
+	display: table-cell;
+	vertical-align:top;
+	border-top: 1px dashed #fff;
+	border-bottom: 1px dashed #fff;
+}
+
+div.comment div p {
+	margin: 0;
+	padding: 3px;
+}
+
+div.comment div.comment_id {
+	min-width: 5%;
+	padding: 0 5px;
+}
+
+div.comment div.comment_body {
+	padding: 0 5px;
+}
+
+div.comment div.comment_body span.name {
+	font-weight: bold;
+	font-size: 0.9em;
+}
+
+div.comment-form {
+	padding-top: 1em;
+}
+
+div.comment-form form fieldset {
+	border: 0;
+	padding: 0;
+	margin: 0;
+}
+
+div.comment-form form fieldset legend{
+	font-size: 1.2em;
+	font-weight: bold;
+}
+
+div.comment-form label{
+	font-size: 0.8em;
+}
+
+div.comment-form input, div.comment-form textarea {
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	border: 2px solid #A0ADC3;
+	resize: none;
+}
+
+div.comment-form input[type=text], div.comment-form textarea {
+	padding: 2px 4px;
+}
+
+div.comment-form textarea {
+	width: calc(100% - 10px);
+}
+
+/*
+div.comments, div.comments div {
+	outline: 1px solid green;
+}
+*/

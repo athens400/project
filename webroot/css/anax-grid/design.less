@@ -1,0 +1,130 @@
+/**
+ * Colors and effects and details. The pretty part?
+ */
+ 
+/**
+ * General elements
+ **/
+html {
+    overflow-y: scroll;
+}
+ 
+body {
+	background: @bgColorBody;
+    color: @textColor;
+}
+
+a {
+    color: @anchorColor;
+    text-decoration: none;
+}
+a:link {}
+a:hover {
+    color: @anchorColorHover;
+}
+a:visited {}
+a:active {}
+
+fieldset {
+    border: @formBorder;
+    padding-left: 0; 
+}
+ 
+/**
+ * Above header
+ **/
+#above-header {
+    background: black;
+    color: #fff;
+    .font-size(@fontSizeSmall);
+}
+
+#above-header a {
+    color: #fff;
+}
+
+#above-header a:hover {
+    color: @colorBody;
+}
+ 
+ /**
+ * Header
+ **/
+#wrap-header {
+    background: @colorBody;
+}
+
+/**
+ * Flash
+ **/
+ 
+/**
+ * Featured
+ **/
+
+div#featured-1, div#featured-2 {
+    border-right: 1px solid @colorBorder;
+    box-sizing: border-box;
+}
+
+div#featured-1 table, div#featured-2 table, div#featured-3 table {
+    width: 90%;
+    margin: 0 auto;
+}
+
+th.th_title {
+    width: 80%;
+}
+
+td.icon {
+    width: 20%;
+}
+
+/**
+ * Main
+ **/
+
+
+/**
+ * Sidebar
+ **/
+div#sidebar {
+    border-left: 1px solid @colorBorder;
+    box-sizing: border-box;
+}
+
+body.question div#sidebar {
+    border-left: 1px solid @colorBorderLight;
+    box-sizing: border-box;
+}
+
+/**
+ * Footer
+ **/
+div#footer {
+    margin-top: @marginTB*2;
+    padding-top: @marginTB;
+    text-align: center;
+    border-top: 1px solid @colorBorder;
+}
+
+/**
+ * Article
+ **/
+ 
+.article1 {
+	.border(@borderElement1, @borderElement1, @borderElement1, @borderElement1, solid black, @marginTB, @marginLR);
+	.rounded-corners();
+}
+
+/**
+ * Users page
+ **/
+div.user_headings, div.user_info {
+    display: inline-block;
+}
+
+div.user_headings {
+    margin-right: 20px;
+    font-weight: bold;
+}

@@ -1,0 +1,1 @@
+![byline-bild](img/me/byline.jpg)Daniel Svensson är utbildad lärare som sadlat om och ridit in i programmeringsvärlden. För närvarande studerar Daniel PHP-MVC på distans vid Blekinge Tekniska Högskola.

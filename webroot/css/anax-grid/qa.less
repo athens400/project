@@ -1,0 +1,154 @@
+/**
+ * Layout for QA
+ **/
+ 
+div.owner, div.editicon {
+    display: inline-block;
+}
+
+div.owner {
+    width: 90%;
+}
+
+div.
+ 
+/**
+ * Question list
+ */
+ 
+table.questions {
+    width: 100%;
+}
+
+tr.question {
+    height: @rowHeight * 3;
+    border-top: 1px solid @colorBody2;
+    border-bottom: 1px solid @colorBody2;
+}
+
+td.question_rank, td.question_no_of_answers {
+    width: 13%;
+    padding-right: 20px;
+    text-align: center;
+}
+
+div.meta_number {
+    .font-size(@fontSizeH5);
+}
+
+td.question_body {
+    //width: 75%;
+}
+
+div#sidebar article.questions-list {
+    margin-left: @marginLR;
+}
+
+/**
+ * Question
+ */
+ 
+div.question {
+    margin-bottom: @marginTB;
+}
+
+
+/**
+ * Tags
+ */
+body.question div.question_tags {
+    margin-bottom: @marginTB;
+}
+
+div.question_tags a {
+    color: #000;
+}
+
+div.question_tag {
+    display: inline-block;
+    .font-size(@fontSizeSmall);
+    padding: 0 5px;
+    margin: 0 1px;
+    background: @colorBodyLight;
+}
+
+div.question_tag:hover {
+    background: @colorBodyLighter;
+}
+
+table.gen-grid {
+    width: 100%;
+    border-spacing: 20px;
+    border-collapse: separate;
+}
+
+table.gen-grid a {
+    color: @textColor;
+}
+
+tr.gen-grid-row {
+}
+
+td.gen-grid-item {
+    background: @colorBodyLight;
+    padding: 20px;
+}
+
+td.gen-grid-item:hover {
+    background: @colorBodyLighter;
+}
+
+div.gen-grid-item-body {
+    color: #777;
+    margin-top: 5px;
+}
+
+/**
+ * Answer
+ */
+
+div.answer {
+    margin: @marginTB*2 0 @marginTB 0;
+}
+ 
+div.answer_header {
+    text-transform: uppercase;
+}
+
+div.answer_header h2 {
+    margin: 0;
+}
+
+/**
+ * Comments
+ */
+
+ div.comment {
+    border-top: 1px solid @colorBorder;
+ }
+ 
+ div.comment_text {
+    padding-left: @marginLR;
+    .font-size(@fontSizeSmall);
+ }
+ 
+/**
+ * Sidemenu
+ */
+ 
+div.sidemenu {
+    margin-left: @marginLR;
+}
+ 
+span.sidemenuitem {
+    display: inline-block;
+    .font-size(@fontSizeSmall);
+    padding: 0 5px;
+    margin: 0 1px;
+    color: black;
+    background: @colorBodyLight;
+}
+
+span.sidemenuitem:hover {
+    background: @colorBodyLighter;
+}

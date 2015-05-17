@@ -1,0 +1,72 @@
+/**
+ * Colors and effects and details. The pretty part?
+ */
+ 
+/**
+ * General elements
+ **/
+body {
+	background: @bgColorBody;
+}
+ 
+/**
+ * Header
+ **/
+#wrap-header {
+	.bg-img-tint(0, 0, 0, 0.5, 'img/headerbg.jpg');
+}
+
+/**
+ * Flash
+ **/
+ 
+/**
+ * Featured
+ **/
+ 
+body.theme div#featured-2 {
+	.bg-img-tint(202, 209, 189, 0.5, 'img/grid.png');
+	.rounded-corners();
+}
+
+/**
+ * Main
+ **/
+
+#main img {
+	float: right;
+	.image-size(9, 1, @imgPadding);
+	margin: 0 0 @marginTB (@marginLR - @imgPadding);
+}
+
+/**
+ * Sidebar
+ **/
+
+/**
+ * Byline
+ **/
+
+.byline {
+	.font-size(@fontSizeSmall);
+	font-style: italic;
+	border-top: @borderElement2 solid black;
+	.border(1px, dashed black, @marginTB);
+	border-color: black transparent transparent transparent;
+	margin-top: @marginTB * 2;
+}
+ 
+#main .byline img {
+	float: left;
+	.image-size(3, 1, @imgPadding);
+	margin: 0 (@marginLR - @imgPadding) 0 0;
+}
+
+/**
+ * Article
+ **/
+ 
+.article1 {
+	.border(@borderElement1, solid black, @marginTB, @marginLR);
+	.rounded-corners();
+}

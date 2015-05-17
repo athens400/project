@@ -1,0 +1,31 @@
+/**
+ * Flash messages
+ */
+
+div.flash-error-message,
+div.flash-success-message,
+div.flash-notice-message,
+div.flash-warning-message {
+    line-height: 3em;
+    border: 1px solid black;
+    margin: 10px 0;
+    padding: 0 10px;
+    border-radius: 5px;
+}
+ 
+div.flash-error-message {
+    background: rgba(255,0,0,0.6);
+}
+
+div.flash-success-message {
+    background: rgba(0,255,0,0.6);
+}
+
+div.flash-notice-message {
+    background: rgba(255,255,0,0.6);
+}
+
+div.flash-warning-message {
+    background: rgba(255,165,0,0.6);
+}
+
