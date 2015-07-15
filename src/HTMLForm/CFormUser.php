@@ -16,7 +16,7 @@ class CFormUser extends \Mos\HTMLForm\CForm
      * Constructor
      *
      */
-    public function __construct($user = null)
+    public function __construct($user = null, $readonly = false)
     {
         parent::__construct([], [
             'acronym' => [
@@ -24,6 +24,7 @@ class CFormUser extends \Mos\HTMLForm\CForm
                 'label'         => 'Akronym',
                 'value'         => (isset($user) ? (isset($user->acronym) ? $user->acronym : null) : null),
                 'required'      => true,
+                'readonly'      => $readonly,
                 'validation'    => ['not_empty'],
             ],
             'email' => [
