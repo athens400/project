@@ -125,33 +125,48 @@ class UsersController implements \Anax\DI\IInjectionAware
      *
      * @return void
      */
-    public function addAction()
+    public function addAction($fail = null)
     {
         $this->di->session();
         
-        $form = new \Anax\HTMLForm\CFormUser();
+        $addUserFail = $fail ? ($this->session->has('addUserFail') ? $this->session->get('addUserFail') : null) : null;
+        
+        $form = new \Anax\HTMLForm\CFormUser($addUserFail);
         $form->setDI($this->di);
         $check = $form->check();
         
         if($check === true) {
+            if($this->users->userExists($form->value('acronym'))) {
+                $addUserFail = new \StdClass();         // Standard 'empty' class, mocks user object if add user is fail
+                $addUserFail->name = $form->value('name'); 
+                $addUserFail->email = $form->value('email');
+                
+                $this->session->set('addUserFail', $addUserFail);
+                $this->message->notice('Akronymen "' . $form->value('acronym') . '" är upptagen.');
+                $this->redirectTo('users/add/fail');
+            } else { 
+                if($this->session->has('addUserFail')) {
+                    $this->session->set('addUserFail', null);
+                }
             
- 
-            $now = gmdate('Y-m-d H:i:s');
- 
-            $this->users->save([
-                'acronym' => $form->value('acronym'),
-                'name' => $form->value('name'),
-                'email' => $form->value('email'),
-                'password' => password_hash($form->value('password'), PASSWORD_DEFAULT),
-                'created' => $now,
-                'updated' => $now,
-                'active' => $now,
-            ]);
-            $this->message->success('Du är nu registrerad och kan logga in.');
-            $this->redirectTo('users/login');
+                $now = gmdate('Y-m-d H:i:s');
+     
+                $this->users->save([
+                    'acronym' => $form->value('acronym'),
+                    'name' => $form->value('name'),
+                    'email' => $form->value('email'),
+                    'password' => password_hash($form->value('password'), PASSWORD_DEFAULT),
+                    'created' => $now,
+                    'updated' => $now,
+                    'active' => $now,
+                ]);
+                $this->message->success('Du är nu registrerad och kan logga in.');
+                $this->redirectTo('users/login');
+            }
         }
         
         $this->theme->setTitle("Registrera användare");
+        $this->views->addString($this->message->getMessage(), 'flash');
         $this->di->views->add('wgtotw/page', [
             'title' => "Registrera användare",
             'content' => $form->getHTML()
@@ -174,12 +189,13 @@ class UsersController implements \Anax\DI\IInjectionAware
         
         if($this->isOwner($id) or $this->isAdmin())
         {
-            $form = new \Anax\HTMLForm\CFormUser($user);
+            $form = new \Anax\HTMLForm\CFormUser($user, true);
             $form->setDI($this->di);
             $check = $form->check();
 
             if($check === true) {
                 $redirect = null;
+                $now = gmdate('Y-m-d H:i:s');
                 $this->users->save([ 
                                     'id'       => $id,
                                     'acronym'  => $form->value('acronym'),
