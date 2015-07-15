@@ -54,6 +54,30 @@ class User extends \Anax\MVC\CDatabaseModel
     }
     
     /**
+     * Check if user exists
+     *
+     * @return bool
+     */
+    public function userExists($acronym)
+    {
+        $this->db->select()
+                 ->from($this->getSource())
+                 ->where("acronym = ?");
+                 
+        $this->db->execute([$acronym]);
+        $user = $this->db->fetchInto($this);
+        
+        if($user)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+    
+    /**
      * Find all users
      *
      * @return objects
